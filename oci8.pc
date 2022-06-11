@@ -1,0 +1,14 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/oracle/21/client64/lib
+includedir=${exec_prefix}/include/oracle/21/client64
+
+glib_genmarshal=glib-genmarshal
+gobject_query=gobject-query
+glib_mkenums=glib-mkenums
+
+Name: oci8
+Description: oci8 library
+Libs: -L${libdir} -lclntsh
+Cflags: -I${includedir}
+Version: 21

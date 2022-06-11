@@ -12,3 +12,6 @@ services:
     image: oraclegocli
     tty: true
     command: bash
+    volumes:
+      - .:/app
+

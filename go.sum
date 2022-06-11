@@ -1,0 +1,4 @@
+github.com/mattn/go-oci8 v0.1.1 h1:aEUDxNAyDG0tv8CA3TArnDQNyc4EhnWlsfxRgDHABHM=
+github.com/mattn/go-oci8 v0.1.1/go.mod h1:wjDx6Xm9q7dFtHJvIlrI99JytznLw5wQ4R+9mNXJwGI=
+github.com/sijms/go-ora/v2 v2.4.24 h1:g71y4S7lRwmZLY8dBGZjao8Xs7x0yTXiioFVQBMrOG0=
+github.com/sijms/go-ora/v2 v2.4.24/go.mod h1:EHxlY6x7y9HAsdfumurRfTd+v8NrEOTR3Xl4FWlH6xk=
