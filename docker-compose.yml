@@ -11,5 +11,21 @@ services:
     build: .
     image: oraclegocli
     tty: true
-    command: bash
+    command: sh
+
+  go-ora:
+    build:
+      context: .
+      dockerfile: Dockerfile.go-ora
+    image: go-ora:local
+    tty: true
+    command: sh
+
+  go-oci8:
+    build:
+      context: .
+      dockerfile: Dockerfile.go-oci8
+    image: go-oci8:local
+    tty: true
+    command: sh
 

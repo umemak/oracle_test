@@ -1,0 +1,15 @@
+FROM golang:alpine AS builder
+
+WORKDIR /app
+
+COPY ./go.mod ./go.sum ./
+COPY go-ora ./go-ora/
+
+RUN CGO_ENABLED=0 go build -ldflags="-s -w -extldflags \"-static\"" -o bin/go-ora go-ora/main.go
+
+FROM alpine
+
+WORKDIR /app
+COPY --from=builder /app/bin/go-ora bin/go-ora
+
+CMD [ "bin/go-ora", "-server", "oracle://system:OraclePwd@db:1521/XE", "select 1 from dual" ]
