@@ -29,3 +29,19 @@ services:
     tty: true
     command: sh
 
+  go-oci8-bullseye:
+    build:
+      context: .
+      dockerfile: Dockerfile.go-oci8.bullseye
+    image: go-oci8-bullseye:local
+    tty: true
+    command: sh
+
+  go-oci8-alpine:
+    build:
+      context: .
+      dockerfile: Dockerfile.go-oci8.alpine
+    image: go-oci8-alpine:local
+    tty: true
+    command: sh
+
