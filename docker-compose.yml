@@ -7,6 +7,16 @@ services:
     environment:
       - ORACLE_PWD=OraclePwd
 
+  adminer:
+    build:
+      context: adminer/
+      dockerfile: Dockerfile
+    image: adminer:local
+    ports:
+      - 18080:8080
+    tty: true
+    command: sh
+
   cli:
     build: .
     image: oraclegocli
